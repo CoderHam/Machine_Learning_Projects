@@ -29,7 +29,6 @@ plt.scatter(ages_test, net_worths_test, color = "r", label="test")
 plt.legend()
 plt.xlabel("Age")
 plt.ylabel("Net Worth")
-plt.show()
 
 from sklearn.linear_model import LinearRegression
 
@@ -47,3 +46,6 @@ print "\nintercept: ", reg.intercept_
 
 print "\nR-square score for training data: ", reg.score(ages_train, net_worths_train)
 print "\nR-square score for test data: ", reg.score(ages_test, net_worths_test)
+
+#plt.plot(ages_train, net_worths_train, color = "b", linewidth=3)
+plt.show()
