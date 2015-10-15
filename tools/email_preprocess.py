@@ -12,10 +12,15 @@ from sklearn.feature_selection import SelectPercentile, f_classif
 
 def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/email_authors.pkl"):
     """ 
-           -- splits into training/testing sets (10% testing)
+        this function takes a pre-made list of email texts (by default word_data.pkl)
+        and the corresponding authors (by default email_authors.pkl) and performs
+        a number of preprocessing steps:
+            -- splits into training/testing sets (10% testing)
             -- vectorizes into tfidf matrix
             -- selects/keeps most helpful features
+
         after this, the feaures and labels are put into numpy arrays, which play nice with sklearn functions
+
         4 objects are returned:
             -- training/testing features
             -- training/testing labels
